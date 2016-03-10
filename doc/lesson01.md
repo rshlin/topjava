@@ -1,4 +1,4 @@
-# Занятие 1 онлайн проекта <a href="https://github.com/JavaWebinar/topjava06">Topjava</a>
+# Онлайн проекта <a href="https://github.com/JavaWebinar/topjava06">Topjava</a>
 
 - **Напоминаю, что cвой код пишете только в ветках HWxx. Код в ветке MASTER трогать нельзя!
 Модификация кода только через патчи в материалах урока (Apply Patch), иначе придется мержить код.
@@ -12,23 +12,25 @@
 
 - **<a href="https://github.com/JavaOPs/topjava/wiki/Git">Подсказка по работе с патчами (GIT Wiki)</a>**
 
-## <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFfm5hSHEtbmxmN2kxb0NocVRwWl9KanowWXVCVXRZTlhaM09wQUswZkRidTA">Материалы урока</a>
+## <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFfm5hSHEtbmxmN2kxb0NocVRwWl9KanowWXVCVXRZTlhaM09wQUswZkRidTA">Материалы 1-го урока</a>
 
-## <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFOGU0a3ZUbFo3Skk">HW0 (Optional): реализация getFilteredMealsWithExceeded через Stream API</a> 
+## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Разбор домашнего задания HW0:
+### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFOGU0a3ZUbFo3Skk">Optional: реализация getFilteredMealsWithExceeded через Stream API</a>
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFcUp4Z3d0Rk93TzQ">1-1-HW0-stream.patch</a>**
 
-## <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFdTJIQUExajZWWkE">Работа с git в IDEA. HW0: реализация через цикл.</a> 
+### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFdTJIQUExajZWWkE">Работа с git в IDEA. Реализация через цикл.</a>
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFaGJwVXh2eFlTWW8">1-2-HW0-cycle.patch</a>**
 
 > Изменения в проекте: `map.getOrDefault` земенил на `map.merge`, `for` заменены на `forEach`
 
-## <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFRmo0YkVVaDJPTVE">Обзор используемых в проекте технологий. Интеграция ПО.</a>
+## Занятие 1:
+### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFRmo0YkVVaDJPTVE">Обзор используемых в проекте технологий. Интеграция ПО.</a>
 -  <a href="http://zeroturnaround.com/rebellabs/java-tools-and-technologies-landscape-for-2014/">Обзор популярности инструментов и технологий Java за 2014 г.</a>
 -  <a href="http://www.youtube.com/watch?v=rJZHerwi8R0">Видео "Приложение Spring Pet Clinic"</a> 
 -  Приложение <a href="https://github.com/spring-projects/spring-petclinic">Spring Pet Clinic</a>. 
 -  Demo <a href="http://petclinic.cloudapp.net/">Spring Pet Clinic</a>
 
-## <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFSlZMTXBJRXJpakU">Maven.</a>
+### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFSlZMTXBJRXJpakU">Maven.</a>
 - Среда сборки проектов <a href="http://www.apache-maven.ru/" target="_blank">Maven</a>.
 - <a href="http://search.maven.org/#browse">The Central Repository</a>
 - Настройка пропертей Maven: кодировка, java version, зависимости, maven-compiler-plugin
@@ -45,7 +47,7 @@
   - <a href="http://www.ibm.com/developerworks/ru/library/j-5things13/">Зависимости, профили</a>
   - <a href="http://blog.bintray.com/2014/02/11/bintray-as-pain-free-gateway-to-maven-central/">Bintray: gateway to Maven Central</a>
 
-## <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFT3pWNkMzWVVybnc">WAR. Веб-контейнер Tomcat. Сервлеты.</a>
+### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 3. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFT3pWNkMzWVVybnc">WAR. Веб-контейнер Tomcat. Сервлеты.</a>
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFODM5dkxwMUNsVnM">1-3-switch-to-war.patch</a>**
 > Сервлет добавляется в следующем патче, те в web.xml он будет подчеркиваться красным.
 
@@ -70,7 +72,7 @@
   - <a href="http://www.techinfo.net.ru/docs/web/javawebdev.html">Технологии Java для разработки веб-приложений</a>
   - <a href="http://blog.trifork.com/2014/07/14/how-to-remotely-debug-application-running-on-tomcat-from-within-intellij-idea">Remotely debug on tomcat from IDEA</a>
 
-## <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFaTdYUnpLNFFUeXM">Логирование.</a>
+### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 4. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFaTdYUnpLNFFUeXM">Логирование.</a>
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFaWQ0bFJpcGdweGc">1-6-logging.patch</a>**
 > **установите переменную окружения на TOPJAVA_ROOT на корень проекта и перезапустите IDEA**
 
@@ -83,21 +85,38 @@
 - Конфигурирование логирования. Настройка Live Template.
 - Тестирование логирования в сервлете.
 
-### Проверочные вопросы:
+#### Проверочные вопросы:
 - Что нужно изменить в `pom.xml`, чтобы перейти с logback на log4j ?
 
-## Дополнительно
-### <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFeE9LQTdDOTZTOGc">Подсоединение к логгеру по JMX. Выбор работы.</a>
+### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 5. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFeE9LQTdDOTZTOGc">Подсоединение к логгеру по JMX. Выбор работы.</a>
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFQWxEV1NRLXUyTlk">1-7-remote-jmx.patch</a>**
 
 > Для подключения к Remote Process (`localhost:1099`) положить `setenv.bat` в `$TOMCET_HOME/bin`.
 
 - Управление логированием по <a href="https://ru.wikipedia.org/wiki/Java_Management_Extensions">Java Management Extensions</a>.
 
-## Домашнее задание (делаем ветку HW01 от последнего патча)
+### ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Ваши вопросы
 
-    По аналогии с Users добавить MealServlet и mealList.jsp.
-    Задеплоить приложение (war) в Tomcat c applicationContext=topjava
+>  Используются ли еще где-то в реальной разработке JSP, или это уже устаревшая технология? Заменит ли ее JSF (https://javatalks.ru/topics/38037)?
+
+JSF и JSP- разные ниши и задачи.
+JSP- шаблонизатор, JSF- МVС фреймворк. Из моего опыта- с JSP сталкивался в 60% проектов. Его прямая замена: http://www.thymeleaf.org, но пока встречется достаточно редко. JSP не умирает, потому что просто и дешево. Кроме того включается в любой веб-контейнер (в Tomcat его реализация Jasper)
+
+JSF- sun-овский еще фреймворк, с которым я ни разу не сталкивался и особого желания нет. Вот он как раз, по моему мнению, активно замещается хотябы angular.
+
+
+> А зачем мы использовали logback? Почему SLF4J нас не устроило? Почему реализация логирования не log4j?
+
+В `slf4j-api` это API. Там есть только пустая реализация `org.slf4j.helpers.NOPLogger` (можно посмотреть в исходниках). Logback для новых проектов стал стандарт. spring-petclinic и spring-boot используют его. http://logback.qos.ch/reasonsToSwitch.html
+
+---------
+
+## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Домашнее задание HW01 (делаем ветку HW01 от последнего патча)
+
+    По аналогии с Users добавить MealServlet и mealList.jsp. Время выводить без 'T'.
+                                    (пока фильтрацию не делаем и User к UserMeal не добавляем)
+    Задеплоить приложение (war) в Tomcat c applicationContext=topjava 
+                                    (приложение должно быть доступно по http://localhost:8080/topjav)
     Попробовать разные деплои в Tomcat, remote и local debug
     
     Сделать отображения списка еды в jsp, цвет записи в таблице зависит от параметра isExceeded (красный/зеленый).
@@ -125,29 +144,17 @@
 
 Optional
 
-    Сделать В ПАМЯТИ (HashMap) реализацию CRUD (create/read/update/delete) для списка еды.
+    Сделать В ПАМЯТИ (Map) реализацию CRUD (create/read/update/delete) для списка еды с учетом многопоточности.
+    Хранение в памяти будет одна из наших реализаций (такжен будет jdbc, jpa и data-jpa), подумайте над ее названием. 
+    Работать с ней через интерфейс, который не должен ничего знать о деталях реализации (Map, DB или что-то еще).
+
     В качестве ключа добавить id в UserMeal/ UserMealWithExceed.
-    AJAX/JavaScript использовать не надо, делаем через <form method="post"> и doPost() в сервлете.
+    Сделать форму редактирования в JSP:  
+           AJAX/JavaScript использовать не надо, делаем через <form method="post"> и doPost() в сервлете.
 
+  - <a href="https://danielniko.wordpress.com/2012/04/17/simple-crud-using-jsp-servlet-and-mysql/">SIMPLE CRUD USING JSP, SERVLET</a>
 
----------
-
-### Ваши вопросы
-
->  Используются ли еще где-то в реальной разработке JSP, или это уже устаревшая технология? Заменит ли ее JSF (https://javatalks.ru/topics/38037)?
-
-JSF и JSP- разные ниши и задачи.
-JSP- шаблонизатор, JSF- МVС фреймворк. Из моего опыта- с JSP сталкивался в 60% проектов. Его прямая замена: http://www.thymeleaf.org, но пока встречется достаточно редко. JSP не умирает, потому что просто и дешево. Кроме того включается в любой веб-контейнер (в Tomcat его реализация Jasper)
-
-JSF- sun-овский еще фреймворк, с которым я ни разу не сталкивался и особого желания нет. Вот он как раз, по моему мнению, активно замещается хотябы angular.
-
-
-> А зачем мы использовали logback? Почему SLF4J нас не устроило? Почему реализация логирования не log4j?
-
-В `slf4j-api` это API. Там есть только пустая реализация `org.slf4j.helpers.NOPLogger` (можно посмотреть в исходниках).
-Logback для новых проектов стал стандарт. spring-petclinic и spring-boot используют его. http://logback.qos.ch/reasonsToSwitch.html
-
-### Решение проблем
+### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Решение проблем
 
 - Если вы не попадаете на страничку/брекпойнт в сервлете: 
   - внимательно проверьте url и applicationContext (Application Context должен быть тот же, что и url приложения): https://github.com/JavaOPs/topjava/wiki/IDEA
@@ -170,8 +177,9 @@ protected void doPost(HttpServletRequest request, ...) {
 
 ----------------------------
 
-### Подсказки по HW01 (лучше сначала сделать самостоятельно, а потом проверить)
-
-- Хранение в `HashMap` - одна из наших реализаций (такжен будет jdbc, jpa и data-jpa). Т.е. с ней лучше работать через интерфейс, который не должен ничего знать о деталях реализации (Map, DB или что-то еще).
+### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Типичные ошибки
 - Хранить нужно `UserMeal` и конвертировать ее в `UserMealWithExceed` когда отдаем список на отображение в JSP. Иначе при редактировании любой записи или изменении юзером своей нормы `caloriesPerDay` нужно будет пересчитывать все записи юзера.
 - Стили `color` можно применять ко всей строке таблицы `tr`, а не каждой ячейке.
+- DateTimeFormatter можно сделать один заранее (он потокобезопасный в отличии от SimpleDateFormatter), а не создавать новый при каждом запросе.
+- Реализаций интерфейса хранения будет несколько. Нужно учитывать это в названии класса.
+- Если в названии класса есть Meal, не нужно использовать слово meal в методах класса.
