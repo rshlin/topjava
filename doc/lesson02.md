@@ -113,16 +113,15 @@
 
 > Что означает для Spring
 
-   <bean class="ru.javawebinar.topjava.service.UserServiceImpl">
-	   <property name="repository" ref="mockUserRepository"/>
-   </bean> ?
-   
+         <bean class="ru.javawebinar.topjava.service.UserServiceImpl">
+             <property name="repository" ref="mockUserRepository"/>
+         </bean> ?
 
 Можно сказать так: создай и занеси в свой контекст бин UserServiceImpl и заинжекть в его проперти из своего контекста бин mockUserRepository.
 
 > Как биндинг происходит для `@Autowired`? Как поступать, если у нас больше одной реализации `UserRepository`?
 
-`@Autowired`  инжектит по типу (т.е. ижектит класс который наследует `UserRepository`). Обычно он один. Если у нас несколько реализаций, Spring не поднимится и поругается - No unique bean. В этом случае можно уточнить имя бина через <a href="http://www.mkyong.com/spring/spring-autowiring-qualifier-example/">@Qualifier</a>. `@Qualifier` обычно добавляют только в случае нескольких реализаций.
+`@Autowired`  инжектит по типу (т.е. ижектит класс который наследует `UserRepository`). Обычно он один. Если у нас несколько реализаций, Spring не поднимится и поругается - No unique bean. В этом случае <a href="http://www.mkyong.com/spring/spring-autowiring-qualifier-example/">можно уточнить имя бина через @Qualifier</a>. `@Qualifier` обычно добавляют только в случае нескольких реализаций.
 
 --------------------
 
