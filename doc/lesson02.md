@@ -73,6 +73,7 @@
    -  <a href="http://stackoverflow.com/questions/6827752/whats-the-difference-between-component-repository-service-annotations-in">Difference
        between @Component, @Repository & @Service annotations in Spring</a>
    -  <a href="http://www.mkyong.com/spring/spring-auto-scanning-components/">Spring Auto Scanning Components</a>
+   -  <a href="http://www.seostella.com/ru/article/2012/02/12/ispolzovanie-annotacii-autowired-v-spring-3.html">Использование аннотации @Autowired</a>
 
 -  Справочник:
    -  <a href="http://image.slidesharecdn.com/springintroduction-130729220359-phpapp01/95/spring-introduction-3-638.jpg?cb=1375162442">DI/ Service Locator</a>
@@ -101,6 +102,27 @@
 У нас наружу будет отдаваться как UserMeals, так и UserMealsWithExceeded (для таблицы). Т.е. UserMealsWithExceeded у нас является Transfer Object и его надо пернести в пакет to, а для UserMeals мы отдельного TO создавать не будем.
 На многих проектах (и собеседованиях) практикуют разделение на уровне maven модулей entity слоя от логики и соответствующей конвертацией ВСЕХ Entity в TO, даже если у них те же самые поля.
 Хороший ответ когда TO объязательны есть на <a href="http://stackoverflow.com/questions/21554977/should-services-always-return-dtos-or-can-they-also-return-domain-models#21569720">Stackoverflow: When to Use</a>.
+
+> Что такое схема в spring-app.xml xsi:schemaLocation и зачем она нужна
+
+<a href="https://ru.wikipedia.org/wiki/XML_Schema">XML схема</a> нужна для валидации xml, IDEA делает по ней атвозаполнение.
+
+> Почему контроллеры положили в папку web, а не в conrollers?
+
+Тоже самое что domain/model - просто разные названия. web думаю даже чаще называют (например в spring petclinic)
+
+> Что означает для Spring
+
+   <bean class="ru.javawebinar.topjava.service.UserServiceImpl">
+	   <property name="repository" ref="mockUserRepository"/>
+   </bean> ?
+   
+
+Можно сказать так: создай и занеси в свой контекст бин UserServiceImpl и заинжекть в его проперти из своего контекста бин mockUserRepository.
+
+> Как биндинг происходит для `@Autowired`? Как поступать, если у нас больше одной реализации `UserRepository`?
+
+`@Autowired`  инжектит по типу (т.е. ижектит класс который наследует `UserRepository`). Обычно он один. Если у нас несколько реализаций, Spring не поднимится и поругается - No unique bean. В этом случае можно уточнить имя бина через <a href="http://www.mkyong.com/spring/spring-autowiring-qualifier-example/">@Qualifier</a>. `@Qualifier` обычно добавляют только в случае нескольких реализаций.
 
 --------------------
 
