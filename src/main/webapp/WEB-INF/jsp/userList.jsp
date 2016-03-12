@@ -1,13 +1,9 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="../jspf/page.jspf"%>
 <html>
-<head>
-    <title>User list</title>
-</head>
+<c:set var="title" value="User List"/>
+<%@include file="../jspf/head.jspf"%>
 <body>
+<%@include file="../jspf/menu.jspf"%>
 <h2>User list</h2>
-<ul>
-    <li><a href="users">Users</a></li>
-    <li><a href="meals">Meals</a></li>
-</ul>
 </body>
 </html>

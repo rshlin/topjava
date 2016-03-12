@@ -40,7 +40,7 @@ public class MealServlet extends InjectServlet {
         switch (null == action ? READ : action) {
             case CREATE:
                 LOG.info("create action");
-                req.setAttribute(USERMEAL, new UserMeal(TimeUtil.now(), "", 0));
+                req.setAttribute(USERMEAL, new UserMeal(TimeUtil.now(), "", 1000));
                 req.getRequestDispatcher("WEB-INF/jsp/mealEdit.jsp").forward(req, resp);
                 break;
             case UPDATE:
