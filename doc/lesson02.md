@@ -127,26 +127,25 @@
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Домашнее задание HW02
 
-    - Имплементировать InMemoryUserRepositoryImpl  по аналогии с InMemoryUserMealRepositoryImpl
-                                                     (список пользователей возвращать отсортированным по имени)
+    1. Имплементировать InMemoryUserRepositoryImpl по аналогии с InMemoryUserMealRepositoryImpl
+                                                   (список пользователей возвращать отсортированным по имени)
   
-    - Сделать реализацию слоев приложения для функциональности "еда":
+    2. Сделать реализацию слоев приложения для функциональности "еда":
        - зарефакторить UserMealRepository/InMemoryUserMealRepositoryImpl:
           - еда принадлежит пользователю
           - список еды возвращать отсортированным по времени
           - если еда отсутствует или чужая, возвращать null/false (см. UserRepository)
 
-       - API должна удовлетворять все потребности демо приложения и ничего лишнего (см. http://topjava.herokuapp.com)
+       - API контроллера должна удовлетворять все потребности демо приложения и ничего лишнего 
+                                                                           (см. http://topjava.herokuapp.com)
        - после авторизации запрос попадает в контроллер, методы которого будут доступны снаружи по http
                     (id авторизованного юзера попадает (сделаем позже) в LoggedUser.id(), см. ProfileRestController).
-         Пока обращаемся к контроллеру через сервлет, но он проектируется так, 
-             что дальше будем работаем с ним напрямую, т.е. List<UserMealWithExceed> должен отдаваться из контроллера.
-         UserMealWithExceed переносим в пакет to (transfer objects), 
+       - UserMealWithExceed переносим в пакет to (transfer objects), 
 
        - нельзя позволять модифицировать/смотреть чужую еду. Контроллеры смотрят наружу,
          в запросе может прийти любое id. Проверять: если еда чужая или отсутствует, то бросать NotFoundException.
 
-    - Включить классы в контекст Spring и вызвать из SpringMain методы UserMealRestController
+    3. Включить классы в контекст Spring и вызвать из SpringMain методы UserMealRestController
 
 Примечания:
 
@@ -158,12 +157,12 @@
 
 Optional 
 
-    - Сделать инициализацию Spring и вызов UserMealRestController из MealServlet 
+    1. Сделать инициализацию Spring и вызов UserMealRestController из MealServlet 
                                          (НЕ менять в pom.xml, работаем со spring-context)
     
-    - Добавить в mealList.jsp и MealServlet фильтрацию еды по дате и времени (см. демо)
+    2. Добавить в mealList.jsp и MealServlet фильтрацию еды по дате и времени (см. демо)
     
-    - Добавить выбор текущего залогиненного пользователя (имитация авторизации)
+    3. Добавить выбор текущего залогиненного пользователя (имитация авторизации)
       (например захардкодить 1,2 в index.html select и сделать LoggedUser.setId(userId) в UserServlet).
 
 ---------------------
