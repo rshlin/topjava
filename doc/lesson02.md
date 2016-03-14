@@ -127,8 +127,7 @@
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Домашнее задание HW02
 
-    1. Имплементировать InMemoryUserRepositoryImpl по аналогии с InMemoryUserMealRepositoryImpl
-                                                   (список пользователей возвращать отсортированным по имени)
+    1. Переименовать MockUserRepositoryImpl в InMemoryUserRepositoryImpl и имплементировать по аналогии с                                                      InMemoryUserMealRepositoryImpl (список пользователей возвращать отсортированным по имени)
   
     2. Сделать реализацию слоев приложения для функциональности "еда":
        - зарефакторить UserMealRepository/InMemoryUserMealRepositoryImpl:
