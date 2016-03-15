@@ -160,7 +160,7 @@
 Optional 
 
     1. В MealServlet сделать инициализацию Spring, достать UserMealRestController из контекста 
-       и работать с едой через него. (см. SpringMain. pom.xml НЕ менять, работаем со spring-context)
+       и работать с едой через него (см. SpringMain. pom.xml НЕ менять, работаем со spring-context).
     
     2. Добавить в mealList.jsp и MealServlet фильтрацию еды по дате и времени (см. демо)
     
