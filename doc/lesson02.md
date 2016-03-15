@@ -168,7 +168,7 @@ Optional
       (например захардкодить 1,2 в index.html select и сделать LoggedUser.setId(userId) в UserServlet).
 
 ---------------------
-### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Подсказки по HW02 (для проверки, лучше сначала сделать API самостоятельно)
+### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Подсказки по HW02 (для проверки, сначала сделайте самостоятельно!)
 
 - UserMealRestController должен уметь обрабатывать запросы:
 
