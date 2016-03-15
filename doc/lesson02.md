@@ -162,7 +162,7 @@ Optional
     1. В MealServlet сделать инициализацию Spring, достать UserMealRestController из контекста 
        и работать с едой через него (см. SpringMain. pom.xml НЕ менять, работаем со spring-context).
     
-    2. Добавить в mealList.jsp и MealServlet фильтрацию еды по дате и времени (см. демо)
+    2. Добавить в mealList.jsp и MealServlet две отдельные фильтрации еды: по дате и по времени (см. демо)
     
     3. Добавить выбор текущего залогиненного пользователя (имитация авторизации)
       (например захардкодить 1,2 в index.html select и сделать LoggedUser.setId(userId) в UserServlet).
