@@ -92,19 +92,21 @@
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Домашнее задание HW03
 ```
-    - Понять, почему перестали работать `SpringMain/ InMemoryAdminRestControllerTest/ InMemoryAdminRestControllerSpringTest`
+    - Понять, почему перестали работать SpringMain/ 
+                                       InMemoryAdminRestControllerTest/ InMemoryAdminRestControllerSpringTest
     - Дополнить скрипты создания и инициализации базы таблицой MEALS. Запустить скрипты на вашу базу (через Run)
-    - Реализовать через Spring JDBC Template `JdbcUserMealRepositoryImpl`
+    - Реализовать через Spring JDBC Template JdbcUserMealRepositoryImpl
       - сделать каждый метод за один SQL запрос
       - userId в класс UserMeal вставлять НЕ надо
                                    (для UI и REST это лишние данные, userId это id залогиненного пользователя)
-      - `JbdcTemplate` работает через сеттеры. Нужно их добавить в UserMeal
+      - JbdcTemplate работает через сеттеры. Нужно их добавить в UserMeal
       - Cписок еды должен быть отсортирован (тогда мы его сможем сравнивать с тестовыми данными).
         Кроме того это требуется для UI и API: последняя еда наверху.
-      - postgres драйвер не понимает `LocalDateTime`, использовать преобразования:
-                                    `Timestamp.valueOf(ldt) / timestamp.toLocalDateTime()`
-      - Преобразовывать Timestamp <-> LocalDateTime можно в геттерах/сеттерах `UserMeal`, но лучше сделать свой `RowMapper`
-    - Проверить работу `MealServelt`, запустив приложение
+      - postgres драйвер не понимает LocalDateTime, использовать преобразования: 
+                                                Timestamp.valueOf(ldt) / timestamp.toLocalDateTime()
+      - Преобразовывать Timestamp -> LocalDateTime можно в геттерах/сеттерах UserMeal, 
+                                                                                но лучше сделать свой RowMapper
+    - Проверить работу MealServelt, запустив приложение
 ```
 Optional
 
