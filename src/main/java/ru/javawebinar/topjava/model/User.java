@@ -1,6 +1,6 @@
 package ru.javawebinar.topjava.model;
 
-import ru.javawebinar.topjava.util.UserMealsUtil;
+import ru.javawebinar.topjava.util.MealsUtil;
 
 import java.util.Date;
 import java.util.EnumSet;
@@ -22,13 +22,23 @@ public class User extends NamedEntity {
 
     protected Set<Role> roles;
 
-    protected int caloriesPerDay = UserMealsUtil.DEFAULT_CALORIES_PER_DAY;
+    protected int caloriesPerDay = MealsUtil.DEFAULT_CALORIES_PER_DAY;
 
     public User() {
     }
 
+    public User(Integer id, String name, int caloriesPerDay, Set<Role> roles, Date registered, boolean enabled, String password, String email) {
+        super(id, name);
+        this.caloriesPerDay = caloriesPerDay;
+        this.roles = roles;
+        this.registered = registered;
+        this.enabled = enabled;
+        this.password = password;
+        this.email = email;
+    }
+
     public User(Integer id, String name, String email, String password, Role role, Role... roles) {
-        this(id, name, email, password, UserMealsUtil.DEFAULT_CALORIES_PER_DAY, true, EnumSet.of(role, roles));
+        this(id, name, email, password, MealsUtil.DEFAULT_CALORIES_PER_DAY, true, EnumSet.of(role, roles));
     }
 
     public User(Integer id, String name, String email, String password, int caloriesPerDay, boolean enabled, Set<Role> roles) {
@@ -82,6 +92,33 @@ public class User extends NamedEntity {
 
     public String getPassword() {
         return password;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User)) return false;
+
+        User user = (User) o;
+
+        if (enabled != user.enabled) return false;
+        if (caloriesPerDay != user.caloriesPerDay) return false;
+        if (email != null ? !email.equals(user.email) : user.email != null) return false;
+        if (password != null ? !password.equals(user.password) : user.password != null) return false;
+        if (registered != null ? !registered.equals(user.registered) : user.registered != null) return false;
+        return roles != null ? roles.equals(user.roles) : user.roles == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = email != null ? email.hashCode() : 0;
+        result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (enabled ? 1 : 0);
+        result = 31 * result + (registered != null ? registered.hashCode() : 0);
+        result = 31 * result + (roles != null ? roles.hashCode() : 0);
+        result = 31 * result + caloriesPerDay;
+        return result;
     }
 
     @Override

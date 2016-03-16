@@ -16,7 +16,18 @@
 </head>
 <body>
 <section>
-    <h2><a href="index.html">Home</a></h2>
+    <nav>
+        <h2>
+            <a href="index.html">Home</a>
+        </h2>
+        <h2>
+            <jsp:useBean id="profile" scope="session" type="ru.javawebinar.topjava.web.LoggedUser"/>
+            <c:choose>
+                <c:when test="${profile.id==-1}"> <a href="users?a=''">Sign Up</a></c:when>
+                <c:otherwise><a href="users">Profile</a></c:otherwise>
+            </c:choose>
+        </h2>
+    </nav>
     <h3>Meal list</h3>
     <a href="meals?action=create">Add Meal</a>
     <hr>
@@ -31,7 +42,7 @@
         </tr>
         </thead>
         <c:forEach items="${mealList}" var="meal">
-            <jsp:useBean id="meal" scope="page" type="ru.javawebinar.topjava.model.UserMealWithExceed"/>
+            <jsp:useBean id="meal" scope="page" type="ru.javawebinar.topjava.to.MealWithExceed"/>
             <tr class="${meal.exceed ? 'exceeded' : 'normal'}">
                 <td>
                         ${meal.dateTime.toLocalDate()} ${meal.dateTime.toLocalTime()}

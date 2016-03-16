@@ -10,7 +10,7 @@ import java.util.List;
  * 06.03.2015.
  */
 @Controller
-public class AdminRestController extends AbstractUserController {
+public class AdminRestController extends AbstractUserController implements AuthorizationManager{
 
     public List<User> getAll() {
         return super.getAll();
