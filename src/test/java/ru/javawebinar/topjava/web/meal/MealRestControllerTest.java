@@ -1,9 +1,9 @@
 package ru.javawebinar.topjava.web.meal;
 
-import org.junit.Before;
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import ru.javawebinar.topjava.model.Meal;
 import ru.javawebinar.topjava.to.MealWithExceed;
@@ -23,20 +23,19 @@ import static org.junit.Assert.assertTrue;
 
 public class MealRestControllerTest {
 
-    static private ApplicationContext ctx;
-    static private LoggedUser user;
+    static private ConfigurableApplicationContext ctx;
 
-    private MealRestController controller;
+    private static MealRestController controller;
 
     @BeforeClass
     public static void setCtx() {
         ctx = new ClassPathXmlApplicationContext("spring/spring-app.xml");
-        user = new LoggedUser(0);
+        controller = ctx.getBean(MealRestController.class);
     }
 
-    @Before
-    public void setUp() throws Exception {
-        controller = ctx.getBean(MealRestController.class);
+    @AfterClass
+    public void tearDown() throws Exception {
+       ctx.close();
     }
 
     @Test

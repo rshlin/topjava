@@ -1,5 +1,8 @@
 package ru.javawebinar.topjava.util;
 
+import org.springframework.util.StringUtils;
+
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -16,6 +19,14 @@ public class TimeUtil {
             return lt.compareTo(startTime) >= 0 && lt.compareTo(endTime) <= 0;
         else
             return lt.compareTo(startTime) >= 0 || lt.compareTo(endTime) <= 0;
+    }
+
+    public static LocalTime parseTime(String toParse, LocalTime def) {
+        return StringUtils.isEmpty("toParse") ? def : LocalTime.parse(toParse);
+    }
+
+    public static LocalDate parseDate(String toParse, LocalDate def) {
+        return StringUtils.isEmpty("toParse") ? def : LocalDate.parse(toParse);
     }
 
     public static String toString(LocalDateTime ldt) {

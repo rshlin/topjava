@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import ru.javawebinar.topjava.model.Meal;
+import ru.javawebinar.topjava.util.TimeUtil;
 import ru.javawebinar.topjava.web.filter.AuthorizationFilter;
 import ru.javawebinar.topjava.web.listener.ApplicationContextListener;
 import ru.javawebinar.topjava.web.meal.MealRestController;
@@ -81,11 +82,13 @@ public class MealServlet extends HttpServlet {
             case ACTION_FILTER:
                 LOG.info(ACTION_FILTER);
                 LocalDateTime start = LocalDateTime.of(
-                        getLocalDate(request,"min"),
-                        getLocalTime(request,"min"));
+                        TimeUtil.parseDate(request.getParameter(PARAM_FILTER_START_DATE),LocalDate.MIN),
+                        TimeUtil.parseTime(request.getParameter(PARAM_FILTER_START_TIME),LocalTime.MIN)
+                        );
                 LocalDateTime end = LocalDateTime.of(
-                        getLocalDate(request,"max"),
-                        getLocalTime(request,"max"));
+                        TimeUtil.parseDate(request.getParameter(PARAM_FILTER_END_DATE),LocalDate.MAX),
+                        TimeUtil.parseTime(request.getParameter(PARAM_FILTER_END_TIME),LocalTime.MAX)
+                        );
                 request.setAttribute(ATTR_MEAL_LIST, controller.getInRange(user, start, end));
                 request.getRequestDispatcher("/mealList.jsp").forward(request, response);
                 break;
@@ -111,28 +114,6 @@ public class MealServlet extends HttpServlet {
                 request.setAttribute(ATTR_MEAL_LIST, controller.getAll(user));
                 request.getRequestDispatcher("/mealList.jsp").forward(request, response);
         }
-    }
-
-    private LocalDate getLocalDate(HttpServletRequest request, String edge) {
-        LocalDate parse = null;
-        boolean min = edge.equals("min");
-        try {
-            parse = LocalDate.parse(request.getParameter(min?PARAM_FILTER_START_DATE:PARAM_FILTER_END_DATE));
-        } catch (Exception e) {
-            parse = min ?LocalDate.MIN:LocalDate.MAX;
-        }
-        return parse;
-    }
-
-    private LocalTime getLocalTime(HttpServletRequest request, String edge) {
-        LocalTime parse = null;
-        boolean min = edge.equals("min");
-        try {
-            parse = LocalTime.parse(request.getParameter(min?PARAM_FILTER_START_TIME:PARAM_FILTER_END_TIME));
-        } catch (Exception e) {
-            parse = min ?LocalTime.MIN:LocalTime.MAX;
-        }
-        return parse;
     }
 
     private int getId(HttpServletRequest request) {
