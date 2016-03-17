@@ -50,12 +50,13 @@
             <a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/jdbc.html">Spring JdbcTemplate</a>,
             <a href="http://en.wikipedia.org/wiki/MyBatis">MyBatis</a>, <a href="http://www.jdbi.org/">JDBI</a>, <a href="http://www.jooq.org/">jOOQ</a>
 
-- Справочник:
+- Основы:
   - <a href="https://ru.wikipedia.org/wiki/Реляционная_СУБД">Реляционная СУБД</a>
   - <a href="http://habrahabr.ru/post/103021/">Реляционные базы</a>
-  - <a href="https://www.youtube.com/playlist?list=PLIU76b8Cjem5qdMQLXiIwGLTLyUHkTqi2">Обущающее видео по JDBC</a>
+  - <a href="https://www.youtube.com/playlist?list=PLIU76b8Cjem5qdMQLXiIwGLTLyUHkTqi2">Уроки по JDBC</a>
   - <a href="http://postgresguide.com/">Postgres Guide</a>
   - <a href="http://www.postgresqltutorial.com">PostgreSQL Tutorial</a>
+  - <a href="http://campus.codeschool.com/courses/try-sql">Try SQL</a>
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 5. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFQWtHYU1qTDlMWVE">Настройка Database в IDEA.</a>
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFS2dBZUw4aFVYWVk">9-add-postgresql.patch</a>**
@@ -96,7 +97,12 @@
 `@BeforeClass` выполняется один раз после загрузки класса (поэтому метод может быть только статический), `@Before` перед каждым тестом. Не ленитесь сходить в исходники по Ctrl+Enter и почитать javadoc. BTW: для чистоты экземпляр тестового класса пересоздается перед каждым тестом: http://stackoverflow.com/questions/6094081/junit-using-constructor-instead-of-before
 
 > Тесты в классе в каком-то определенном порядке выполняются ("сверху вниз" например)?
+
 Порядок по умолчанию неопределен, каждый тест должен быть автономен и не зависеть от других. См. также http://stackoverflow.com/questions/3693626/how-to-run-test-methods-in-specific-order-in-junit4 
+
+> Объязательно ли разворачивать postgreSQL?
+
+Желательно: хорошая и надежная DB:) Если совсем не хочется - можно работать со своей любимой RDBMS (поправить `initDB.sql`) или работать c heroku (креденшелы к нему есть в `postgres.properties`). На следующем уроке добавим HSQLDB, она не тербует установки.
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Домашнее задание HW03
 ```
