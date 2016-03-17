@@ -56,5 +56,23 @@
         </c:forEach>
     </table>
 </section>
+<section style="padding: 10px">
+    <form id="filter" method="get">
+        <input type="hidden" name="action" value="filter">
+        <div id="date">
+            <label for="startDate">From Date:</label>
+            <input id="startDate" name="startDate" type="date">
+            <label for="endDate">To Date:</label>
+            <input id="endDate" name="endDate" type="date">
+        </div>
+        <div id="time">
+            <label for="startTime">From Time:</label>
+            <input id="startTime" name="startTime" type="time">
+            <label for="endTime">From Time:</label>
+            <input id="endTime" name="endTime" type="time"></div>
+        <div>
+            <input type="submit" value="Filter"></div>
+    </form>
+</section>
 </body>
 </html>
