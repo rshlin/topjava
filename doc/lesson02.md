@@ -177,7 +177,6 @@ Optional
 
 - `InMemoryUserRepositoryImpl.getByEmail` попробуйте сделать через `stream`
 - `InMemoryUserRepositoryImpl.delete` попробуйте сделать за одно обращение к map
-
 - UserMealRestController должен уметь обрабатывать запросы:
     - Отдать свою еду (для отображения в таблице, формат `List<UserMealWithExceed>`), запрос БЕЗ параметров
     - Отдать свою еду, отфильтрованную по startDate, startTime, endDate, endTime
