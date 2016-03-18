@@ -10,6 +10,9 @@
    который умеет сравнивать T или суперклассы от T
 
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFM05DVFNPUHYxSXc">1-HW2-repository.patch</a>**
+
+**Внимание: при удалении класса он остается скомпилированный у вас в target (и classpath). В этом случае (или вообще если непонятно почему проект глючит) сделаейт в maven clean.**
+
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFbVhXbFV0VEFrelk">2-HW2-meal-layers.patch</a>**
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFQXNyR0JoNFFTSTQ">3-HW2-optional-MealServlet.patch</a>**
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFdWtRM1pnbnhfYXc">4-HW2-optional-filter.patch</a>**
