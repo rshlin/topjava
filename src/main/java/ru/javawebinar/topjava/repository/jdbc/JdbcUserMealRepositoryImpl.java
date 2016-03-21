@@ -2,12 +2,14 @@ package ru.javawebinar.topjava.repository.jdbc;
 
 import org.postgresql.util.PGTimestamp;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.support.DataAccessUtils;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
+import org.springframework.util.CollectionUtils;
 import ru.javawebinar.topjava.model.UserMeal;
 import ru.javawebinar.topjava.repository.UserMealRepository;
 
@@ -61,7 +63,8 @@ public class JdbcUserMealRepositoryImpl implements UserMealRepository {
             Number key = insertMeal.executeAndReturnKey(map);
             userMeal.setId(key.intValue());
         } else {
-            namedParameterJdbcTemplate.update(UPDATE_MEAL, map);
+            if (namedParameterJdbcTemplate.update(UPDATE_MEAL, map) == 0)
+                return null;
         }
         return userMeal;
     }
@@ -73,7 +76,8 @@ public class JdbcUserMealRepositoryImpl implements UserMealRepository {
 
     @Override
     public UserMeal get(int id, int userId) {
-        return jdbcTemplate.queryForObject(GET_MEAL, ROW_MAPPER, id, userId);
+        List<UserMeal> meal = jdbcTemplate.query(GET_MEAL, ROW_MAPPER, id, userId);
+        return CollectionUtils.isEmpty(meal) ? null : DataAccessUtils.requiredSingleResult(meal);
     }
 
     @Override
@@ -84,11 +88,7 @@ public class JdbcUserMealRepositoryImpl implements UserMealRepository {
     @Override
     public List<UserMeal> getBetween(LocalDateTime startDate, LocalDateTime endDate, int userId) {
         return jdbcTemplate.query(
-                GET_MEALS_BETWEEN_DATES,
-                ROW_MAPPER,
-                userId,
-                PGTimestamp.valueOf(startDate),
-                PGTimestamp.valueOf(endDate)
+                GET_MEALS_BETWEEN_DATES, ROW_MAPPER, userId, startDate, endDate
         );
     }
 }
