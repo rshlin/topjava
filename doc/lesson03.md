@@ -149,3 +149,4 @@ Optional
    Изучаем <a href="http://easy-code.ru/lesson/java-nested-classes">вложенные,внутренние</a>,  <a href="http://easy-code.ru/lesson/local-anonymous-nested-classes-java">локальные и анонимные</a> классы. Наконец, делаем маппер как константу через лямду.
 
 - Проверте, что вернется при update чужой еды.
+- `InMemory*Test` предполагает использовать нашу реализацию репозитория в памяти
