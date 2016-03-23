@@ -142,9 +142,10 @@ Optional
     - Сделать `UserMealServiceTest` из `UserMealService` (Ctrl+Shift+T и выбрать JUnit4) и реализовать тесты.
     - Сделаеть тесты на чужих юзеров (delete, get, update) с тем чтобы получить `NotFoundException`
     - Предложить решение, как почнинить `SpringMain/ AdminInMemoryTest/ SpringAdminInMemoryTest`
-    - Сделайте индекс к таблице Meals. см. http://postgresguide.com/performance/indexes.html
+    - Сделайте индекс к таблице Meals.
     
 - <a href="http://stackoverflow.com/questions/970562/postgres-and-indexes-on-foreign-keys-and-primary-keys">Postgres and Indexes on Foreign Keys and Primary Keys</a>
+- <a href="http://postgresguide.com/performance/indexes.html">Postgres Guide: Indexes</a>
 
 ### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Ошибки в HW3:
 -  UserMealRowMapper многие делают отдельным классом. Зачем?
