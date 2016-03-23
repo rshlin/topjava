@@ -144,6 +144,8 @@ Optional
     - Предложить решение, как почнинить `SpringMain/ AdminInMemoryTest/ SpringAdminInMemoryTest`
     - Сделайте индекс к таблице Meals. см. http://postgresguide.com/performance/indexes.html
     
+- <a href="http://stackoverflow.com/questions/970562/postgres-and-indexes-on-foreign-keys-and-primary-keys">Postgres and Indexes on Foreign Keys and Primary Keys</a>
+
 ### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Ошибки в HW3:
 -  UserMealRowMapper многие делают отдельным классом. Зачем?
    Изучаем <a href="http://easy-code.ru/lesson/java-nested-classes">вложенные,внутренние</a>,  <a href="http://easy-code.ru/lesson/local-anonymous-nested-classes-java">локальные и анонимные</a> классы. Наконец, делаем маппер как константу через лямду.
