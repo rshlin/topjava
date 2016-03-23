@@ -10,6 +10,9 @@
    который умеет сравнивать T или суперклассы от T
 
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFM05DVFNPUHYxSXc">1-HW2-repository.patch</a>**
+
+**Внимание: при удалении класса он остается скомпилированный у вас в target (и classpath). В этом случае (или вообще если непонятно почему проект глючит) сделаейт в maven clean.**
+
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFbVhXbFV0VEFrelk">2-HW2-meal-layers.patch</a>**
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFQXNyR0JoNFFTSTQ">3-HW2-optional-MealServlet.patch</a>**
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFdWtRM1pnbnhfYXc">4-HW2-optional-filter.patch</a>**
@@ -50,12 +53,13 @@
             <a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/jdbc.html">Spring JdbcTemplate</a>,
             <a href="http://en.wikipedia.org/wiki/MyBatis">MyBatis</a>, <a href="http://www.jdbi.org/">JDBI</a>, <a href="http://www.jooq.org/">jOOQ</a>
 
-- Справочник:
+- Основы:
   - <a href="https://ru.wikipedia.org/wiki/Реляционная_СУБД">Реляционная СУБД</a>
   - <a href="http://habrahabr.ru/post/103021/">Реляционные базы</a>
-  - <a href="https://www.youtube.com/playlist?list=PLIU76b8Cjem5qdMQLXiIwGLTLyUHkTqi2">Обущающее видео по JDBC</a>
+  - <a href="https://www.youtube.com/playlist?list=PLIU76b8Cjem5qdMQLXiIwGLTLyUHkTqi2">Уроки по JDBC</a>
   - <a href="http://postgresguide.com/">Postgres Guide</a>
   - <a href="http://www.postgresqltutorial.com">PostgreSQL Tutorial</a>
+  - <a href="http://campus.codeschool.com/courses/try-sql">Try SQL</a>
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 5. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFQWtHYU1qTDlMWVE">Настройка Database в IDEA.</a>
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFS2dBZUw4aFVYWVk">9-add-postgresql.patch</a>**
@@ -90,21 +94,46 @@
 -  Мои комментарии: решения проблем разработчиком.
 -  Нужен ли разработчику JavaScript?
 
+## ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Ваши вопросы
+> Какая разница между @BeforeClass and @Before? 
+
+`@BeforeClass` выполняется один раз после загрузки класса (поэтому метод может быть только статический), `@Before` перед каждым тестом. Не ленитесь сходить в исходники по Ctrl+Enter и почитать javadoc. BTW: для чистоты экземпляр тестового класса пересоздается перед каждым тестом: http://stackoverflow.com/questions/6094081/junit-using-constructor-instead-of-before
+
+> Тесты в классе в каком-то определенном порядке выполняются ("сверху вниз" например)?
+
+Порядок по умолчанию неопределен, каждый тест должен быть автономен и не зависеть от других. См. также http://stackoverflow.com/questions/3693626/how-to-run-test-methods-in-specific-order-in-junit4 
+
+> Объязательно ли разворачивать postgreSQL?
+
+Желательно: хорошая и надежная DB:) Если совсем не хочется - можно работать со своей любимой RDBMS (поправить `initDB.sql`) или работать c heroku (креденшелы к нему есть в `postgres.properties`). На следующем уроке добавим HSQLDB, она не тербует установки.
+
+> Зачем начали индексацию с 100000?
+
+Тут уже нет "как принято". Так удобно вставлять в базу (если будет потребность)  записи не мешая счетчику.
+
+> Разве не должно быть у каждой роли примари кей ID и форин кей user_id ?
+
+Отношение user <-> roles многие ко многим, делается это через таблицу-связку USER_ROLES. Но отдельной таблицы ROLES у нас нет,  мы храним значение роли прямо в таблице-связке USER_ROLES. Есть еще варианты использовать тип enum у Postgres или хранить там INTEGER Roles.ordinal(). При этом нельзя будет менять порядок в enum Role и добавлять новые роли можно будет только в конец: http://stackoverflow.com/questions/6789342/jpa-enum-ordinal-vs-string
+
+
+
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Домашнее задание HW03
 ```
-    - Понять, почему перестали работать `SpringMain/ InMemoryAdminRestControllerTest/ InMemoryAdminRestControllerSpringTest`
+    - Понять, почему перестали работать SpringMain/ 
+                                       InMemoryAdminRestControllerTest/ InMemoryAdminRestControllerSpringTest
     - Дополнить скрипты создания и инициализации базы таблицой MEALS. Запустить скрипты на вашу базу (через Run)
-    - Реализовать через Spring JDBC Template `JdbcUserMealRepositoryImpl`
+    - Реализовать через Spring JDBC Template JdbcUserMealRepositoryImpl
       - сделать каждый метод за один SQL запрос
       - userId в класс UserMeal вставлять НЕ надо
                                    (для UI и REST это лишние данные, userId это id залогиненного пользователя)
-      - `JbdcTemplate` работает через сеттеры. Нужно их добавить в UserMeal
+      - JbdcTemplate работает через сеттеры. Нужно их добавить в UserMeal
       - Cписок еды должен быть отсортирован (тогда мы его сможем сравнивать с тестовыми данными).
         Кроме того это требуется для UI и API: последняя еда наверху.
-      - postgres драйвер не понимает `LocalDateTime`, использовать преобразования:
-                                    `Timestamp.valueOf(ldt) / timestamp.toLocalDateTime()`
-      - Преобразовывать Timestamp <-> LocalDateTime можно в геттерах/сеттерах `UserMeal`, но лучше сделать свой `RowMapper`
-    - Проверить работу `MealServelt`, запустив приложение
+      - postgres драйвер не понимает LocalDateTime, использовать преобразования: 
+                                                Timestamp.valueOf(ldt) / timestamp.toLocalDateTime()
+      - Преобразовывать Timestamp -> LocalDateTime можно в геттерах/сеттерах UserMeal, 
+                                                                                но лучше сделать свой RowMapper
+    - Проверить работу MealServelt, запустив приложение
 ```
 Optional
 
@@ -113,10 +142,14 @@ Optional
     - Сделать `UserMealServiceTest` из `UserMealService` (Ctrl+Shift+T и выбрать JUnit4) и реализовать тесты.
     - Сделаеть тесты на чужих юзеров (delete, get, update) с тем чтобы получить `NotFoundException`
     - Предложить решение, как почнинить `SpringMain/ AdminInMemoryTest/ SpringAdminInMemoryTest`
-    - Сделайте индекс к таблице Meals. см. http://postgresguide.com/performance/indexes.html
+    - Сделайте индекс к таблице Meals.
     
+- <a href="http://stackoverflow.com/questions/970562/postgres-and-indexes-on-foreign-keys-and-primary-keys">Postgres and Indexes on Foreign Keys and Primary Keys</a>
+- <a href="http://postgresguide.com/performance/indexes.html">Postgres Guide: Indexes</a>
+
 ### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Ошибки в HW3:
 -  UserMealRowMapper многие делают отдельным классом. Зачем?
    Изучаем <a href="http://easy-code.ru/lesson/java-nested-classes">вложенные,внутренние</a>,  <a href="http://easy-code.ru/lesson/local-anonymous-nested-classes-java">локальные и анонимные</a> классы. Наконец, делаем маппер как константу через лямду.
 
 - Проверте, что вернется при update чужой еды.
+- `InMemory*Test` предполагает использовать нашу реализацию репозитория в памяти
