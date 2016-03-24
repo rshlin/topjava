@@ -93,7 +93,7 @@
 ###  ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 5. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFSTJEQ1Rvd3Jvc2c">Добавляем поддержку HSQLDB</a>
 >  ВНИМАНИЕ: патч меняет postgres.properties
 
-- **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFQ1JCaEFFUTcyVzQ">8-add-hsqldb.patch</a>**
+- **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFNE9lNlhFTEx0ZTA">8-add-hsqldb.patch</a>**
 
 ## ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Ваши вопросы
 
