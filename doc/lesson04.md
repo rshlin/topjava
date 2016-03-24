@@ -16,6 +16,13 @@
  - по полю `date_time` также есть запросы + мы по нему сортируем список результатов
  те они- хорошие кандидаты для индексирования. <a href="http://stackoverflow.com/questions/970562/postgres-and-indexes-on-foreign-keys-and-primary-keys">На id как на primary key индекс создается автоматически</a>.
 
+## ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Вопросы по HW3
+
+> Почему в meals дата и каллории у нас не NOT NULL? Это ведь обязательные для заполнения поля.
+
+Спасибо, недосмотр. Сделаем NOT NULL в HW5.
+
+
 ## Занятие 4:
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFU005ZzBNZmZnTVU">Улучшаем качество кода</a>
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFQVFxSUdpLUd1WE0">3-improve-code.patch</a>**
