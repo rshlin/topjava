@@ -35,7 +35,6 @@
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 2. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFU0Z2R190eDllYmM">Spring: инициализация и популирование DB</a>
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFQVNzRl9oS2I5VTA">4-init-and-populate-db.patch</a>**
-> - IDEA может `${jdbc.initLocation}` подчеркивать красным - иногда тупит... Главное- чтобы приложение работало.
 > - `@Sql` в тестах заменяет `@Before public void setUp()`, те выполняется перед каждым тестом
 
 -  <a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/jdbc.html#jdbc-initializing-datasource-xml">Инициализация базы при старте приложения</a>
@@ -92,9 +91,12 @@
 
 
 ###  ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 5. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFSTJEQ1Rvd3Jvc2c">Добавляем поддержку HSQLDB</a>
->  ВНИМАНИЕ: патч меняет postgres.properties
 
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFNE9lNlhFTEx0ZTA">8-add-hsqldb.patch</a>**
+
+>  ВНИМАНИЕ: патч меняет postgres.properties
+
+> IDEA может `${jdbc.initLocation}` подчеркивать красным - иногда тупит... Главное- чтобы приложение работало.
 
 ## ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Ваши вопросы
 
