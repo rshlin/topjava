@@ -3,6 +3,7 @@
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Разбор домашнего задания HW3
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFdVhaMklZQVNkUGc">JdbcUserMealRepositoryImpl + UserMealServiceTest</a>
+- <a href="http://www.techonthenet.com/postgresql/between.php">POSTGRESQL: BETWEEN CONDITION</a>
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFeW1lR0JwY2ZpWHc">1-HW3.patch</a>**
 
 > Новый Postgres драйвер <a href="https://jdbc.postgresql.org/documentation/head/8-date-time.html">поддерживает Java 8 Date and Time</a>. Преобразования c Timestamp оказались уже не нужны. Мне кажется хороший пример того, что все надо проверять самим, а не верить на слово:)
