@@ -25,6 +25,7 @@ Each restaurant provides new menu each day.
 
 As a result, provide a link to github repository. It should contain the code, README.md with API documentation and couple curl commands to test it.
 -----------------------------
+
 P.S.: Make sure everything works with latest version that is on github :)
 
 P.P.S.: Asume that your API will used by a frontend developer to build frontend on top of that.
