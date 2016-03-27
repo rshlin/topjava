@@ -47,6 +47,8 @@
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 4. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFVWZYcHoyUF9qX2M">ORM. Hibernate. JPA.</a>
 > ВНИМАНИЕ: патч меняет postgres.properties, в котором у вас свои креденшелы к базе.
 
+> Тесты и приложение ломаются. `UserMealServiceTest` починится после выполнения HW04 (`JpaUserMealRepositoryImpl`)
+
 -  **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFT0JoR0I1UGxycnc">6-add-jpa.patch</a>**
 >  Upgrade Hibernate to 5.0.4 needed to add `javax.transaction.jta`, see <a href="https://hibernate.atlassian.net/browse/HHH-10307">5.0.4 requires javax.transaction.SystemException</a>
 >  Upgrade Hibernate Validator needed to add `javax.el-api`, see <a href="http://stackoverflow.com/questions/24386771/javax-validation-validationexception-hv000183-unable-to-load-javax-el-express">javax.validation.ValidationException</a>
@@ -96,7 +98,7 @@
 
 >  ВНИМАНИЕ: патч меняет postgres.properties
 
-> IDEA может `${jdbc.initLocation}` подчеркивать красным - иногда тупит... Главное- чтобы приложение работало.
+> IDEA может `${jdbc.initLocation}` подчеркивать красным - иногда тупит...
 
 ## ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Ваши вопросы
 
