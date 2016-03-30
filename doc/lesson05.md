@@ -2,6 +2,7 @@
 
 ### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Правки в проекте
 -  **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFUVoyV28ybXF0ZTQ">0-fix.patch</a>**
+
 > <a href="https://jdbc.postgresql.org/documentation/head/8-date-time.html">Новый драйвер Postgres работает с Java 8 Time API</a>, но не понимает год 0.
 
 > Поправили в создании meals поля NOT NULL
