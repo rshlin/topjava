@@ -15,7 +15,21 @@ import java.time.LocalDateTime;
 @Table(name = "meals", uniqueConstraints = {
         @UniqueConstraint(name = "meals_unique_user_datetime_idx", columnNames = {"user_id", "date_time"})
 })
+@NamedQueries({
+        @NamedQuery(name = UserMeal.DELETE, query = "DELETE FROM UserMeal m WHERE m.id = :id AND m.user.id = :userId"),
+        @NamedQuery(name = UserMeal.UPDATE, query = "UPDATE UserMeal m SET m.dateTime= :dateTime, m.calories = :calories, m.description = :description WHERE m.id = :id AND m.user.id = :userId"),
+        @NamedQuery(name = UserMeal.GET, query = "SELECT m FROM UserMeal m WHERE m.id=:id AND m.user.id=:userId"),
+        @NamedQuery(name = UserMeal.GET_ALL, query = "SELECT m FROM UserMeal m WHERE m.user.id = :userId ORDER BY m.dateTime DESC"),
+        @NamedQuery(name = UserMeal.GET_BETWEEN, query = "SELECT m FROM UserMeal m  WHERE m.user.id = :userId AND m.dateTime BETWEEN :startDate AND :endDate ORDER BY m.dateTime DESC")
+})
 public class UserMeal extends BaseEntity {
+
+
+    public static final String DELETE = "UserMeal.delete";
+    public static final String UPDATE = "UserMeal.update";
+    public static final String GET = "UserMeal.get";
+    public static final String GET_ALL = "UserMeal.getAll";
+    public static final String GET_BETWEEN = "UserMeal.getBetween";
 
     @Column(name = "date_time")
     private LocalDateTime dateTime;
