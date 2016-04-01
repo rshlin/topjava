@@ -45,6 +45,7 @@
  >  - поменять в UserServiceTest/UserMealServiceTest `@ActiveProfiles(Profiles.HSQLDB)`
 
 - <a href="https://dzone.com/articles/using-spring-profiles-xml">Using Spring Profiles in XML Config</a>
+> Галочка в XML профиле влияет только на отображение в Spring и никак на выполнение кода.
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 3. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFTWJOdHduOWtNcTA">Пул коннектов</a>
 
