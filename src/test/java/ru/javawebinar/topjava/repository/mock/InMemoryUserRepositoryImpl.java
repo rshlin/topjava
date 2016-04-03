@@ -12,7 +12,6 @@ import javax.annotation.PreDestroy;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
@@ -63,6 +62,11 @@ public class InMemoryUserRepositoryImpl implements UserRepository {
     @Override
     public List<User> getAll() {
         return repository.values().stream().sorted(USER_COMPARATOR).collect(Collectors.toList());
+    }
+
+    @Override
+    public User getUserWithMeals(int id) {
+        return null;
     }
 
     @Override

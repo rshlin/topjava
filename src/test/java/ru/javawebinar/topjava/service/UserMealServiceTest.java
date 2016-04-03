@@ -14,10 +14,10 @@ import static ru.javawebinar.topjava.MealTestData.*;
 import static ru.javawebinar.topjava.UserTestData.ADMIN_ID;
 import static ru.javawebinar.topjava.UserTestData.USER_ID;
 
-public abstract class UserMealServiceTest extends GenericServiceTest{
+public abstract class UserMealServiceTest extends GenericServiceTest {
 
     @Autowired
-    private UserMealService service;
+    protected UserMealService service;
 
     @Test
     public void testDelete() throws Exception {

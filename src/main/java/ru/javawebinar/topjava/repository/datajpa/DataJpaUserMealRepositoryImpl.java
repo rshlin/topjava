@@ -35,7 +35,7 @@ public class DataJpaUserMealRepositoryImpl implements UserMealRepository {
 
     @Override
     public boolean delete(int id, int userId) {
-        return proxy.deleteByIdAndUserId(id, userId)!=0;
+        return proxy.deleteByIdAndUserId(id, userId) != 0;
     }
 
     @Override
@@ -52,4 +52,10 @@ public class DataJpaUserMealRepositoryImpl implements UserMealRepository {
     public List<UserMeal> getBetween(LocalDateTime startDate, LocalDateTime endDate, int userId) {
         return proxy.findByUserIdAndDateTimeBetweenOrderByDateTimeDesc(userId, startDate, endDate);
     }
+
+    public UserMeal getWithUser(int id, int userId) {
+        return proxy.getWithUser(id, userId);
+    }
+
+
 }

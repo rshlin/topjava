@@ -9,7 +9,10 @@ import ru.javawebinar.topjava.util.UserMealsUtil;
 
 import java.time.LocalDateTime;
 import java.time.Month;
-import java.util.*;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
@@ -81,5 +84,10 @@ public class InMemoryUserMealRepositoryImpl implements UserMealRepository {
         return getAll(userId).stream()
                 .filter(um -> TimeUtil.isBetween(um.getDateTime(), startDateTime, endDateTime))
                 .collect(Collectors.toList());
+    }
+
+    @Override
+    public UserMeal getWithUser(int id, int userId) {
+        return null;
     }
 }
