@@ -98,8 +98,8 @@ Optional
      -  достать по id пользователя вместе с его едой
      -  достать по id еду вместе с пользователем
      Обращения к DB сделать в одной транзакции
-
-     В DataJpaUserMealRepositoryImpl.save попробуйте как упражнение обойтись одним вызовом proxy.save(userMeal)
+     
+     Почините JDBC реализацию для HSQLDB, можно также разнести ее по профилям.
 
 ## ![question](https://cloud.githubusercontent.com/assets/13649199/13672858/9cd58692-e6e7-11e5-905d-c295d2a456f1.png) Ваши вопросы
 > В <a href="https://github.com/spring-projects/spring-petclinic/tree/master/src/main/java/org/springframework/samples/petclinic/repository/springdatajpa">spring-petclinic</a> DataJpa реализована без проксирования и без доп. классов. В таком виде как у них, spring data смотрится, конечно, намного лаконичней других реализаций, но у нас получилось  вдвое больше кода, чем с тем же jpa или jdbc. Плюс только пожалуй в том, что query находятся прямо в репозитории, а  не где-то там в другом пакете. Так что получается, spring data лучше подходит для простейших crud без всяких "фишек"? или в чем его достоинство для больших и сложных проектов?
@@ -119,3 +119,5 @@ Optional
 - Для IDEA не забудте выставить в `spring-db.xml` справа вверху в Change Profiles... профили, например `datajpa, postgres`
 - Общие части для всех в `spring-db.xml` можно оставить как есть без профилей, но до первого `<beans profile=` (вверху файла).
 - Починка MealServlet/SpringMain: попробуйте поднять Spring контекст с профилями без использования `spring.profiles.activ`. Когда делаете `setActiveProfiles` контекст спринга еще не должен быть инициализирован, иначе выставление профиля уже ничего не будет делать.
+- Если у метода нет реализации, то стандартно бросается `OperationNotSupportedException`.
+- Для уменьшения количества кода при реализации Optional попробуйте сделать default метод в интерфейсе
