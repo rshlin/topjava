@@ -50,7 +50,7 @@
 -  <a href="https://docs.oracle.com/javaee/6/tutorial/doc/bnafi.html">Servlet Lifecycle</a>
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 3.   <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFN3k0ZVk1MnF5TjQ">JPS, JSTL, internationalization</a>
--  **<a href="">8-jsp-jstl-i18n.patch</a>**
+-  **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFeFY3SThJa0hHVFk">8-jsp-jstl-i18n.patch</a>**
 -  <a href="http://www.java2ee.ru/jsp/include.html">jsp:include</a>
 -  Имплементируем UserController. <a href="http://design-pattern.ru/patterns/mvc.html">Паттерн MVC</a>
 
@@ -60,13 +60,19 @@
 - <a href="http://stackoverflow.com/questions/10041410/default-profile-in-spring-3-1#answer-10041835">Set profiles in Spring 3.1</a>
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 5.   <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFdkFRRFdYa0NoWkU">Конфигурирование Tomcat через maven plugin. Jndi-lookup.</a>
--  **<a href="">9-tomcat-pool-jndi.patch</a>**
+> `javax.el-api` scope изменил на `provided` (`el-api.jar` является частью Tomcat)
+
+Запуск из коммандной строки (`clean` нужен для удаления из сборки зависимости `javax.el-api`):
+
+     mvn clean org.apache.tomcat.maven:tomcat7-maven-plugin:run
+
+-  **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFb3pISVRYbGsxc1E">9-tomcat-pool-jndi.patch</a>**
 
 - <a href="https://tomcat.apache.org/maven-plugin-2.0/tomcat7-maven-plugin/">Tomcat Maven Plugin</a>
 - <a href="https://tomcat.apache.org/tomcat-7.0-doc/jndi-resources-howto.html"/>Tomcat JNDI Resources</a>
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 6. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFQThUX2VyQXNiTHM">Spring Web MVC</a>
--  **<a href="">10 spring webmvc.patch</a>**
+-  **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFVUxZQUktSWhJaU0">10-spring-webmvc.patch</a>**
 
 -  <a class="anchor" id="mvc"></a><a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html">Spring Web MVC</a>
 -  <a href="http://design-pattern.ru/patterns/front-controller.html">Паттерн Front Controller</a>
@@ -83,7 +89,10 @@
    -  <a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html#mvc-webappctx-special-beans-tbl">Special bean types in the WebApplicationContext</a>
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 7. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFUEctTkRSMWNvRjg">Spring Internationalization</a>
--  **<a href="">11 spring i18n.patch</a>**
+-  **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFNFhpaTFUSkxScms">11-spring-i18n.patch</a>**
+> Убедитесь что <a href="https://github.com/JavaOPs/topjava/wiki/IDEA#%D0%9F%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-%D0%BA%D0%BE%D0%B4%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D1%83-utf-8">в настройках IDEA кодировка везде UTF-8</a>
+
+> Проверьте, что файлы локализации у вас в UTF-8 (в IDEA справа внизу в статусе есть кодировка и можно перекодировать).
 
 -  <a href="http://simplespringtutorial.com/i18n.html">Spring Internationalization or i18n</a>
 -  <a href="http://learningviacode.blogspot.ru/2012/07/reloadable-messagesources.html">Reloadable MessageSources</a>
@@ -184,8 +193,5 @@ _ru.javawebinar.topjava.model.User_ - имя региона, которое ис
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 ```
-Проверьте также, что проперти файл у вас в UTF-8 (в IDEA справа внизу в статусе есть кодировка и можно перекодировать).
-Убедитесь в настройках, что кодировка везде UTF-8: https://github.com/JavaOPs/topjava/wiki/IDEA (Проблемы с кодировкой)
-
 - Функциональность еды в контроллерах должна быть в пакете meal и сделайте как для User - наследование от абстрактного класса.
 - Если неправильно формируется url относительно контекста приложения посмотрите http://stackoverflow.com/questions/4764405/how-to-use-relative-paths-without-including-the-context-root-name
