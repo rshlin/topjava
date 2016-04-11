@@ -147,7 +147,7 @@ Hibernate supports following open-source cache implementations out-of-the-box: E
 > Почему мы не используем элемент `<context:annotation-config/>` в `spring-db.xml`?
 
 В проекте у нас сейчас 2 Spring контекста: `spring-mvc.xml (см. web.xml, DispatcherServlet)` и родительский `spring/spring-app.xml + spring/spring-db.xml (web.xml, contextConfigLocation)`.
-Грубо: <a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html#d5e15231">2 мапы, причем для mvc доступно все что есть в родителе, но родитель не знает об mvc</a>. Те spring-db.xml не является отдельным самотоятельным контекстом и достаточно того, что `<context:annotation-config/>` у нас есть в `spring-app.xml`.
+Грубо: <a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html#d5e15231">2 мапы, причем для mvc доступно все что есть в родителе, но родитель не знает об mvc</a>. Те spring-db.xml не является отдельным самоcтоятельным контекстом и достаточно того, что `<context:annotation-config/>` у нас есть в `spring-app.xml`.
 
 > В _ehcache.xml_ чем _<cache name="users"_ отличается от _<cache name="ru.javawebinar.topjava.model.User"_?
 
