@@ -197,4 +197,5 @@ _ru.javawebinar.topjava.model.User_ - имя региона, которое ис
 - Функциональность еды в контроллерах должна быть в пакете meal и сделайте как для User - наследование от абстрактного класса.
 - Если неправильно формируется url относительно контекста приложения посмотрите http://stackoverflow.com/questions/4764405/how-to-use-relative-paths-without-including-the-context-root-name
 - JdbcUserRepositoryImpl.update - роли также должны обновлялться
-- JdbcUserRepositoryImpl.getAll - постараться реализовать так, чтобы для 1000 пользователей был меньше, чем 1001 запрос.
+- JdbcUserRepositoryImpl.getAll - постараться реализовать так, чтобы для 1000 пользователей был меньше, чем 1001 запрос (1 или 2).
+- Для контроллера action уже не нужен - запросы нужно подкорректировать
