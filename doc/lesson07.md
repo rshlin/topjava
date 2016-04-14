@@ -20,7 +20,7 @@
 -  **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFUUdLNXI2cGVJZGs">06-HW6-optional-jdbc.patch</a>**
 -  <a href="http://easy-code.ru/lesson/local-anonymous-nested-classes-java">Локальные классы</a>
 
-## Занятие 6:
+## Занятие 7:
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 1. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFTEtkSldKUnE4VkE">Auto generate DDL.</a>
 -  **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFNlRuSmFjLWJBV0k">07-generate-ddl.patch</a>**
 
