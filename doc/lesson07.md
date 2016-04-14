@@ -68,8 +68,7 @@
 -  <a href="http://habrahabr.ru/post/259055/">Тестируем Spring Rest контроллеры</a>: проверка JSON-содержимого ответа через собственный ResultMatcher
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 6. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFVXNmOUdBbUxxWVU">Тестирование через SoapUi. UTF-8</a>
--  **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFZS1heS0tMnhhSDg">14_ soapui_ utf8_ converter.patch</a>**
-
+-  **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFZS1heS0tMnhhSDg">14-soapui-utf8-converter.patch</a>**
 - Решение проблемы с UTF-8 в StringHttpMessageConverter
 -  <a href="http://www.soapui.org/">SoapUi</a>
 
@@ -79,6 +78,14 @@
    
 -  Проверка UTF-8: http://localhost:8080/topjava/rest/profile/text
 -  <a href="http://forum.spring.io/forum/spring-projects/web/74209-responsebody-and-utf-8">ResponseBody and UTF-8</a>
+
+-  **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFWm5pT1hPOEZOcXM">15-test-fix.patch</a>**
+> Поменял `artifactId` на `jackson-datatype-hibernate5`  (был `hibernate4`)
+
+> При запуске из Maven проваливались тесты на `AdminRestControllerTest`: тесты сервиса оставляли после себя базу и кэш не в исходном состоянии.
+Сделал сброс кэша и инициализацию базы не до, а после тестов.
+
+> Убрал лишний `import`
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Домашнее задание HW07
 
