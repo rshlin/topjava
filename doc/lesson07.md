@@ -107,7 +107,7 @@ Optional
 
      Протестировать UserMealRestController через SoapUi или curl.
 
--  <a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/mvc.html#mvc-config-conversion">Кастомный Spring конвертор</a>
+-  <a href="http://www.javabeat.net/introduction-to-spring-converters-and-formatters/">Introduction to Spring Converters and Formatters</a>
 -  <a href="http://stackoverflow.com/questions/13048368/difference-between-spring-mvc-formatters-and-converters">Difference between Spring MVC formatters and converters</a>
 -  <a href="http://rus-linux.net/lib.php?name=/MyLDP/internet/curlrus.html">Написание HTTP-запросов с помощью Curl</a>
 (для Windows можно использовать Git Bash)
