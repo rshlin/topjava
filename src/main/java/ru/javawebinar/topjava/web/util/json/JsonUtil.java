@@ -1,4 +1,4 @@
-package ru.javawebinar.topjava.web.json;
+package ru.javawebinar.topjava.web.util.json;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectReader;
@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.ObjectReader;
 import java.io.IOException;
 import java.util.List;
 
-import static ru.javawebinar.topjava.web.json.JacksonObjectMapper.getMapper;
+import static ru.javawebinar.topjava.web.util.json.JacksonObjectMapper.getMapper;
 
 /**
  * User: gkislin

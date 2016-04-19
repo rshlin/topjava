@@ -2,7 +2,7 @@ package ru.javawebinar.topjava.matcher;
 
 import org.hamcrest.BaseMatcher;
 import org.hamcrest.Description;
-import ru.javawebinar.topjava.web.json.JsonUtil;
+import ru.javawebinar.topjava.web.util.json.JsonUtil;
 
 /**
  * GKislin

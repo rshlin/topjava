@@ -1,12 +1,14 @@
-package ru.javawebinar.topjava.web.json;
+package ru.javawebinar.topjava.web.util.json;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.hibernate5.Hibernate5Module;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import com.fasterxml.jackson.module.paramnames.ParameterNamesModule;
 
 /**
  * User: gkislin
@@ -28,6 +30,8 @@ public class JacksonObjectMapper extends ObjectMapper {
 
     private JacksonObjectMapper() {
         registerModule(new Hibernate5Module());
+
+        registerModule(new ParameterNamesModule(JsonCreator.Mode.PROPERTIES));
 
         registerModule(new JavaTimeModule());
         configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);

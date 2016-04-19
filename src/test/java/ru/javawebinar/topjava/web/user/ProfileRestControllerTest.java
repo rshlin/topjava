@@ -7,7 +7,7 @@ import ru.javawebinar.topjava.TestUtil;
 import ru.javawebinar.topjava.model.Role;
 import ru.javawebinar.topjava.model.User;
 import ru.javawebinar.topjava.web.AbstractControllerTest;
-import ru.javawebinar.topjava.web.json.JsonUtil;
+import ru.javawebinar.topjava.web.util.json.JsonUtil;
 
 import java.util.Collections;
 

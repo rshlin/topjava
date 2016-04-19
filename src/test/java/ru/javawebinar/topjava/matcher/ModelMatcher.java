@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.ResultMatcher;
 import ru.javawebinar.topjava.TestUtil;
-import ru.javawebinar.topjava.web.json.JsonUtil;
+import ru.javawebinar.topjava.web.util.json.JsonUtil;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;

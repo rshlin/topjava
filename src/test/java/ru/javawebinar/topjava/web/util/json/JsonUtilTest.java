@@ -1,4 +1,4 @@
-package ru.javawebinar.topjava.web.json;
+package ru.javawebinar.topjava.web.util.json;
 
 import org.junit.Test;
 import ru.javawebinar.topjava.MealTestData;
