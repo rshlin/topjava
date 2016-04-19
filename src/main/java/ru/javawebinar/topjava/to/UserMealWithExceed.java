@@ -1,6 +1,9 @@
 package ru.javawebinar.topjava.to;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 /**
  * GKislin
@@ -17,11 +20,13 @@ public class UserMealWithExceed {
 
     private final boolean exceed;
 
-    public UserMealWithExceed(LocalDateTime dateTime, String description, int calories, boolean exceed) {
-        this(null, dateTime, description, calories, exceed);
-    }
-
-    public UserMealWithExceed(Integer id, LocalDateTime dateTime, String description, int calories, boolean exceed) {
+    @JsonCreator
+    public UserMealWithExceed(
+           /* @JsonProperty("id")         */ Integer id,
+           /* @JsonProperty("dateTime")   */ LocalDateTime dateTime,
+           /* @JsonProperty("description")*/ String description,
+           /* @JsonProperty("calories")   */ int calories,
+           /* @JsonProperty("exceed")     */ boolean exceed) {
         this.id = id;
         this.dateTime = dateTime;
         this.description = description;
@@ -47,6 +52,23 @@ public class UserMealWithExceed {
 
     public boolean isExceed() {
         return exceed;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof UserMealWithExceed)) return false;
+        UserMealWithExceed that = (UserMealWithExceed) o;
+        return calories == that.calories &&
+                exceed == that.exceed &&
+                Objects.equals(id, that.id) &&
+                Objects.equals(dateTime, that.dateTime) &&
+                Objects.equals(description, that.description);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 
     @Override

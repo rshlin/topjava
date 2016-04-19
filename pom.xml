@@ -51,6 +51,12 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
+                    <testCompilerArguments>
+                        <parameters/>
+                    </testCompilerArguments>
+                    <compilerArguments>
+                        <parameters/>
+                    </compilerArguments>
                 </configuration>
             </plugin>
             <plugin>
@@ -157,6 +163,11 @@
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>${jackson-json.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-parameter-names</artifactId>
             <version>${jackson-json.version}</version>
         </dependency>
 
