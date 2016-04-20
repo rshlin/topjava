@@ -90,7 +90,8 @@
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Домашнее задание HW07
 
      Добавить тесты контроллеров:
-           UserMealControllerTest для mealList.jsp и ResourceControllerTest для style.css (status и ContentType)
+           UserMealControllerTest для /meals по аналогии с  UserControllerTest
+           ResourceControllerTest для style.css (status и ContentType)
 
      Реализовать UserMealRestController и протестировать его через UserMealRestControllerTest
 
