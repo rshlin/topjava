@@ -64,7 +64,7 @@
 -  <a href="http://ruseller.com/jquery.php?id=2">Обработка ajaxError</a>.
 -  <a href="http://ned.im/noty/">jQuery notification</a>
 
-### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 5. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFRVkzcFMwc0hrYmM">Добавление Spring Security</a>
+### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 5. <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFRVkzcFMwc0hrYmM">Добавление к REST контроллерам Spring Security</a>
 >  Правка к видео: путь в intercept-url должен быть полный - pattern="/rest/admin/**"
 
 >  В Spring Security 4.x по умолчанию включен csrf. Будем его проходить на 10м занятии.
