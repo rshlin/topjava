@@ -7,7 +7,7 @@
 ### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Правка кода
 -  **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFWkZZVnl6SE5rT2M">0-fix.patch</a>**
 - Поправил стиль и модификаторы доступа
-- Поменял версию datetimepicker из-за <a href="https://github.com/xdan/datetimepicker/issues/392">проблем с DateFormatter</a>
+- Поменял версию `datetimepicker` из-за <a href="https://github.com/xdan/datetimepicker/issues/392">проблем с DateFormatter</a>
 - Убрал `contentType` в REST тестах delete
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Разбор домашнего задания HW8
