@@ -51,7 +51,7 @@
 -  <a href="http://stackoverflow.com/questions/14730329/jpa-2-0-exception-to-use-javax-validation-package-in-jpa-2-0#answer-17142416">JSR-303, 349</a>
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 4.  <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFcW1qeTVFdS1BdHM">Перевод DataTables на Ajax</a>
--  **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFOERQRVhlbVpSY1E">7-datatable-via-ajax.patch</a>**
+-  **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFLXlrbXZiWm5Oblk">7-datatable-via-ajax.patch</a>**
 -  <a href="http://legacy.datatables.net/usage/options">DataTables Options</a>
 
 ### ![video](https://cloud.githubusercontent.com/assets/13649199/13672715/06dbc6ce-e6e7-11e5-81a9-04fbddb9e488.png) 5.  <a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFUmhUTms1WnhTeHc">Форма логина / логаут.</a>
