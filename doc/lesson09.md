@@ -59,10 +59,10 @@
 -  <a href="http://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#ns-minimal">Минимальный form-login</a>
 -  <a href="http://docs.spring.io/spring-security/site/migrate/current/3-to-4/html5/migrate-3-to-4-xml.html#m3to4-xmlnamespace-form-login">Migrating &lt;form-login&gt;</a>
 
-       Вопросы:
-         Почему при логине как admin еда отдаются для user?
-         Почему при логине как user не отображается список пользователей?
-         Почему еда не редактируется и не удаляется?
+        Вопросы:
+          Почему при логине как admin еда отдаются для user?
+          Почему при логине как user не отображается список пользователей?
+          Почему еда не редактируется и не удаляется?
 
 -  **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFTjItdDZaMGZ4eDg">9-jsp-form-login.patch</a>**
 -  <a href="http://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#ns-form-and-basic">Собственный form-login</a>
