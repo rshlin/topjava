@@ -2,9 +2,9 @@
 
 ### ![error](https://cloud.githubusercontent.com/assets/13649199/13672935/ef09ec1e-e6e7-11e5-9f79-d1641c05cbe6.png) Правка кода
 - **<a href="https://drive.google.com/open?id=0B9Ye2auQ_NsFME50SGUtR053T1U">0-fix.patch</a>**
-  - Добавил в fail детали jqXHR.responseJSON
-  - Упростил callback для `updateTableByData`
-  - Поправил html и import
+- Добавил в fail детали jqXHR.responseJSON
+- Упростил callback для `updateTableByData`
+- Поправил html и import
 
 ## ![hw](https://cloud.githubusercontent.com/assets/13649199/13672719/09593080-e6e7-11e5-81d1-5cb629c438ca.png) Разбор домашнего задания HW9
 
