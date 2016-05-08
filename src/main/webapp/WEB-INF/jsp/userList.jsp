@@ -38,7 +38,7 @@
                             <td>${user.roles}</td>
                             <td>
                                 <input type="checkbox"
-                                       <c:if test="${user.enabled}">checked</c:if> id="${user.id}"/>
+                                       <c:if test="${user.enabled}">checked</c:if> id="${user.id}" onclick="toggleEnabled($(this))"/>
                             </td>
                             <td><fmt:formatDate value="${user.registered}" pattern="dd-MMMM-yyyy"/></td>
                             <td><a class="btn btn-xs btn-primary edit" id="${user.id}">Edit</a></td>
@@ -105,41 +105,54 @@
 <script type="text/javascript" src="webjars/noty/2.3.8/js/noty/packaged/jquery.noty.packaged.min.js"></script>
 <script type="text/javascript" src="resources/js/datatablesUtil.js"></script>
 <script type="text/javascript">
+    function toggleEnabled(cell) {
+        var id = cell.prop('id');
+        var enabled = cell.prop('checked');
+        $.ajax({
+            url: ajaxUrl+id,
+            type: "POST",
+            data: "enabled="+enabled,
+            dataType: "text",
+            success: function () {
+                updateTable();
+            }
+        });
+    }
 
     var ajaxUrl = 'ajax/admin/users/';
     var datatableApi;
 
     // $(document).ready(function () {
     $(function () {
-        datatableApi = $('#datatable').dataTable({
-            "bPaginate": false,
-            "bInfo": false,
-            "aoColumns": [
+        datatableApi = $('#datatable').DataTable({
+            "paging": false,
+            "info": false,
+            "columns": [
                 {
-                    "mData": "name"
+                    "data": "name"
                 },
                 {
-                    "mData": "email"
+                    "data": "email"
                 },
                 {
-                    "mData": "roles"
+                    "data": "roles"
                 },
                 {
-                    "mData": "enabled"
+                    "data": "enabled"
                 },
                 {
-                    "mData": "registered"
+                    "data": "registered"
                 },
                 {
-                    "sDefaultContent": "",
-                    "bSortable": false
+                    "defaultContent": "",
+                    "orderable": false
                 },
                 {
-                    "sDefaultContent": "",
-                    "bSortable": false
+                    "defaultContent": "",
+                    "orderable": false
                 }
             ],
-            "aaSorting": [
+            "order": [
                 [
                     0,
                     "asc"
