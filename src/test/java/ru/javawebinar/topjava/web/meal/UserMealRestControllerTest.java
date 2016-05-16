@@ -19,6 +19,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static ru.javawebinar.topjava.MealTestData.*;
+import static ru.javawebinar.topjava.TestUtil.userHttpBasic;
+import static ru.javawebinar.topjava.UserTestData.USER;
 import static ru.javawebinar.topjava.model.BaseEntity.START_SEQ;
 
 public class UserMealRestControllerTest extends AbstractControllerTest {
@@ -35,6 +37,21 @@ public class UserMealRestControllerTest extends AbstractControllerTest {
                 .andDo(print())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(MATCHER.contentMatcher(MEAL1));
+    }
+
+    @Test
+    public void testGetNotFound() throws Exception {
+        mockMvc.perform(get(REST_URL + ADMIN_MEAL_ID)
+                .with(userHttpBasic(USER)))
+                .andExpect(status().isNotFound());
+    }
+
+    @Test
+    public void testDeleteNotFound() throws Exception {
+        mockMvc.perform(delete(REST_URL + ADMIN_MEAL_ID)
+                .with(userHttpBasic(USER)))
+                .andDo(print())
+                .andExpect(status().isNotFound());
     }
 
     @Test
